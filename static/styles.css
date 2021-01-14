@@ -1,0 +1,72 @@
+
+.navbar-brand {
+  background-image: url('lg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+
+.collapse {
+  position: absolute;
+  right: 200px;
+}
+
+.navbar-nav li {
+  font-size: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+form {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.bghome {
+  background-image: url('bk.jpg');
+  height: 1400px;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.titlehome {
+  margin: auto;
+  width: 600px;
+  color: black;
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+  position: relative;
+  bottom: 900px;
+  right: 300px;
+}
+
+.container {
+  padding: 30px;
+}
+
+.contact {
+  padding: 50px;
+}
+
+.details {
+  padding-left: 50px;
+}
+
+.mapouter {
+  position: relative;
+  left: 650px;
+  bottom: 260px;
+}
+
+.thanks {
+  padding: 50px;
+}

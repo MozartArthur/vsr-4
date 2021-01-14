@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+    All Messages
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <table class="table table-hover">
+        <thead class="bg-primary text-light">
+            <tr>
+                <th scope="col"><input class="form-check-input" type="checkbox" id="main-checkbox" style="margin:0px;position:relative"></th>
+                <th scope="col">ID</th>
+                <th scope="col">Текст</th>
+                <th scope="col">Никнейм</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for record in all_messages %}
+            <tr>
+                <th><input class="form-check-input" type="checkbox" style="margin:0px" name="checkbox" value="{{ record.id }}"></th>
+                <td><a href="message/{{ record.id }}" style="color: black">{{ record.id }}</a></td>
+                <td><a href="message/{{ record.id }}">{{ record.text }}</a></td>
+                <td><a href="message/{{ record.id }}">{{ record.username }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-danger" id="del-button">Удалить!</button>
+
+</div>
+
+{% endblock %}

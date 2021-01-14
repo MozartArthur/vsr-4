@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Message details
+{% endblock %}
+
+{% block content %}
+
+{% for record in list %}
+<div class="container">
+  <form method="post" action="{{ url_for('update') }}">
+    <div class="form-group row">
+      <label for="id" class="col-md-2 col-form-label">ID</label>
+      <div class="col-md-10">
+        <input type="text" readonly class="form-control-plaintext" name="id" id="id" value="{{ record.id }}">
+      </div>
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="Title">Текст</label>
+        <input type="text" class="form-control" name="Text" id="Text" value='{{ record.text }}'>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Author">Никнейм</label>
+        <input type="text" class="form-control" name="Username" id="UserName" value='{{ record.username }}'>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success form-control">Изменить</button>
+    </div>
+  </form>
+</div>
+
+
+{% endfor %}
+{% endblock %}
